@@ -53,39 +53,49 @@ youtube-to-pdf/
 
 **Backend:**
 
-   # macOS and linux #
-
-cd desktop (Recommended)
+```
+## Backend (macOS / Linux)
+bash
+cd ~/Desktop
 git clone https://github.com/Raaz1921/youtube-to-pdf.git
 cd youtube-to-pdf
 cd backend
+
 python -m venv venv
-source venv/bin/activate  
+source venv/bin/activate
+
+pip install -r requirements.txt
+uvicorn app:app --host 127.0.0.1 --port 8000
+
+<!-- (uvicorn app:app --reload --port 8000 ) -->
+
+   
+#### Windows
+```md
+## Backend (Windows)
+
+```powershell
+cd Desktop
+git clone https://github.com/Raaz1921/youtube-to-pdf.git
+cd youtube-to-pdf
+cd backend
+
+python -m venv venv
+venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app:app --host 127.0.0.1 --port 8000
 <!-- (uvicorn app:app --reload --port 8000 ) -->
 
-    # Windows #
-
-cd desktop (Recommended)
-git clone https://github.com/Raaz1921/youtube-to-pdf.git
-cd youtube-to-pdf
-cd backend
-python -m venv venv
-venv\Scripts\activate 
-pip install -r requirements.txt
-uvicorn app:app --host 127.0.0.1 --port 8000
-<!-- (uvicorn app:app --reload --port 8000 ) -->
 ```
 
 **Frontend:**
-
+```
 cd youtube-to-pdf
 cd frontend
 npm install
 npm run dev
-```
 
+```
 ### Docker Commands
 
 ## 📋 Prerequisites
@@ -94,9 +104,8 @@ npm run dev
 - [Docker Compose](https://docs.docker.com/compose/install/) (2.0 or higher)
 - Git
 
-
 ### 1. Clone the Repository
-
+```
 cd desktop (Recommended)
 git clone https://github.com/yourusername/youtube-to-pdf.git
 cd youtube-to-pdf
