@@ -1,0 +1,13 @@
+node_modules
+dist
+.DS_Store
+.git
+.gitignore
+README.md
+QUICKSTART.md
+start.bat
+start.sh
+*.log
+npm-debug.log*
+.vscode
+.idea
