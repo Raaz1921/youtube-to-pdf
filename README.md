@@ -18,6 +18,18 @@ Convert YouTube videos into PDFs with ease. This application downloads videos, e
 - 🐳 Fully Dockerized setup
 - ⚡ Fast and efficient processing
 
+<pre markdown>
+## 📄 Demo Output
+
+### 👀 Preview Screenshot
+![PDF Preview](demo/preview.png)
+
+### 🔽 Download the Sample PDF
+👉 [**Click here to download the demo PDF**](demo/sample.pdf)
+
+</pre>
+
+
 
 ## 🏗️ Project Structure
 
