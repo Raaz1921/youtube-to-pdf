@@ -18,16 +18,13 @@ Convert YouTube videos into PDFs with ease. This application downloads videos, e
 - 🐳 Fully Dockerized setup
 - ⚡ Fast and efficient processing
 
-<pre markdown>
-## 📄 Demo Output
-
-### 👀 Preview Screenshot
+## Demo
+Youtube link(Random) - https://youtu.be/PdQyJ5v_EyM  
+### Preview
 ![PDF Preview](demo/preview.png)
 
-### 🔽 Download the Sample PDF
-👉 [**Click here to download the demo PDF**](demo/sample.pdf)
-
-</pre>
+### Sample PDF
+[Download sample PDF](demo/sample.pdf)
 
 
 
@@ -64,7 +61,7 @@ youtube-to-pdf/
 ```
 ## Backend (macOS / Linux)
 bash
-cd ~/Desktop
+cd ~/Desktop (Recommended)
 git clone https://github.com/Raaz1921/youtube-to-pdf.git
 cd youtube-to-pdf
 cd backend
@@ -80,7 +77,7 @@ uvicorn app:app --host 127.0.0.1 --port 8000
 ## Backend (Windows)
 
 ```powershell
-cd Desktop
+cd Desktop (Recommended)
 git clone https://github.com/Raaz1921/youtube-to-pdf.git
 cd youtube-to-pdf
 cd backend
@@ -94,8 +91,9 @@ uvicorn app:app --host 127.0.0.1 --port 8000
 
 **Frontend:**
 ```
+## Frontend (macOS / Linux / Windows)
 bash
-cd ~/Desktop
+cd ~/Desktop (Recommended)
 cd youtube-to-pdf
 cd frontend
 npm install
