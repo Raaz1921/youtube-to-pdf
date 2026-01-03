@@ -60,13 +60,10 @@ cd ~/Desktop
 git clone https://github.com/Raaz1921/youtube-to-pdf.git
 cd youtube-to-pdf
 cd backend
-
 python -m venv venv
 source venv/bin/activate
-
 pip install -r requirements.txt
 uvicorn app:app --host 127.0.0.1 --port 8000
-
 <!-- (uvicorn app:app --reload --port 8000 ) -->
 
    
@@ -79,7 +76,6 @@ cd Desktop
 git clone https://github.com/Raaz1921/youtube-to-pdf.git
 cd youtube-to-pdf
 cd backend
-
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
@@ -90,6 +86,8 @@ uvicorn app:app --host 127.0.0.1 --port 8000
 
 **Frontend:**
 ```
+bash
+cd ~/Desktop
 cd youtube-to-pdf
 cd frontend
 npm install
@@ -110,7 +108,6 @@ cd desktop (Recommended)
 git clone https://github.com/yourusername/youtube-to-pdf.git
 cd youtube-to-pdf
 docker compose up
-
 Open http://localhost:3000 in your browser
 ```
 
