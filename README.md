@@ -1,27 +1,23 @@
 # YouTube to PDF Converter
 
 Convert YouTube videos into PDFs with ease. This application downloads videos, extracts frames at specified intervals, adds timestamps, and compiles them into a downloadable PDF.
+1. Paste a YouTube video URL
+2. Select video quality (360p, 480p, 720p, or 1080p)
+3. Set frame extraction interval (1-120 seconds)
+4. Click "Generate PDF"
+5. Wait for processing (download starts automatically)
 
 
 ## 🚀 Features
 
-- 📹 Download videos from YouTube
-- ⏱️ Extract frames at custom intervals (1-90 seconds)
+- 📹 Download pdf from YouTube
+- ⏱️ Extract frames at custom intervals (1-120 seconds)
 - 🎨 Automatic timestamp overlay
-- 📄 Generate PDF with screenshots
+- 📄 Generate PDF 
 - 🎯 Quality control (360p - 1080p)
 - 🐳 Fully Dockerized setup
 - ⚡ Fast and efficient processing
 
-
-## 🎯 Usage
-
-1. Open http://localhost:3000 in your browser
-2. Paste a YouTube video URL
-3. Select video quality (360p, 480p, 720p, or 1080p)
-4. Set frame extraction interval (1-120 seconds)
-5. Click "Generate PDF"
-6. Wait for processing (download starts automatically)
 
 ## 🏗️ Project Structure
 
@@ -155,4 +151,4 @@ If you encounter any issues or have questions:
 
 ---
 
-Made with ❤️ by [Raaz]
+Made by [Raaz]
