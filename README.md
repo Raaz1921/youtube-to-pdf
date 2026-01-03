@@ -24,8 +24,8 @@ Youtube link(Random) - https://youtu.be/PdQyJ5v_EyM
 ![PDF Preview](demo/preview.png)
 
 ### Sample PDF
-[Download sample PDF](demo/sample.pdf)
-
+Drive link- https://drive.google.com/file/d/1247plcUd-E7fts0qMU0IXPZsZ9lvsAZU/view?usp=sharing
+### [Download sample PDF](demo/sample.pdf) 
 
 
 ## 🏗️ Project Structure
