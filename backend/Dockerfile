@@ -2,7 +2,7 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install system dependencies for opencv
+# Install system dependencies for opencv and fonts
 RUN apt-get update && apt-get install -y \
     libglib2.0-0 \
     libsm6 \
@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     libgomp1 \
     libgl1 \
     ffmpeg \
+    fonts-dejavu-core \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first for better caching

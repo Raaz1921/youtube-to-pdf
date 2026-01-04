@@ -6,8 +6,9 @@ import numpy as np
 from datetime import timedelta
 
 from fastapi import FastAPI, HTTPException, Query, BackgroundTasks
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from PIL import Image, ImageDraw, ImageFont
 from reportlab.pdfgen import canvas
@@ -31,6 +32,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Mount static files
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # ---------------------------
 # Helpers
@@ -63,7 +67,18 @@ def add_timestamp(frame, seconds):
     timestamp = str(timedelta(seconds=seconds))
 
     try:
-        font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 36)
+        # Try common font paths for Linux (Render) and macOS
+        font_paths = [
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",  # Linux
+            "/System/Library/Fonts/Helvetica.ttc",  # macOS
+        ]
+        font = None
+        for path in font_paths:
+            if os.path.exists(path):
+                font = ImageFont.truetype(path, 36)
+                break
+        if font is None:
+            font = ImageFont.load_default()
     except:
         font = ImageFont.load_default()
 
@@ -132,9 +147,10 @@ def create_pdf(frames_dir, pdf_path):
 # Routes
 # ---------------------------
 
-@app.get("/")
+@app.get("/", response_class=HTMLResponse)
 def root():
-    return {"status": "running"}
+    with open("static/index.html", "r") as f:
+        return f.read()
 
 @app.get("/generate")
 def generate_pdf(
